@@ -1,25 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AlertModule } from 'ngx-bootstrap';
 
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { VisionComponent } from './vision/vision.component';
+import { VisionStep1Component } from './vision/vision.step1.component';
 import { Routes } from './routes';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    VisionComponent
+    VisionComponent,VisionStep1Component
   ],
   imports: [
     BrowserModule,
     AlertModule.forRoot(),
-    Routes
+    Routes,
+    FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

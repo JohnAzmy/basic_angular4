@@ -3,16 +3,16 @@
     <div class="container">
         <div class="row columns">
             <label>6 month:
-                <input type="radio" formControlName="time" value="1">
+                <input type="radio" formControlName="time" value="1" (change)="addPost(1)">
             </label>
             <label>1 year:
-                <input type="radio" formControlName="time" value="2">
+                <input type="radio" formControlName="time" value="2" (change)="addPost(2)">
             </label>
             <label>18 month:
-                <input type="radio" formControlName="time" value="3">
+                <input type="radio" formControlName="time" value="3" (change)="addPost(3)">
             </label>
             <label>2 year:
-                <input type="radio" formControlName="time" value="4">
+                <input type="radio" formControlName="time" value="4" (change)="addPost(4)">
             </label>
 
             <!-- <input type="submit" class="but" value="Submit Form" [disabled]="!form1.valid"> -->

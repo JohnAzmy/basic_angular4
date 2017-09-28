@@ -31,7 +31,7 @@ export class VisionStep1Component implements OnInit {
   }
 
    addPost(post, route: ActivatedRouteSnapshot, state: RouterStateSnapshot){
-       this.vision_time = post.time;
+       this.vision_time = post;
        localStorage.setItem('vision_time', this.vision_time);
        // redirect to route
        this.router.navigate(['vision/dialog1']);

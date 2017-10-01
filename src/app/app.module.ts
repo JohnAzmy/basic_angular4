@@ -6,6 +6,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AlertModule } from 'ngx-bootstrap';
 
 
+import { AuthService } from './auth/auth.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { VisionComponent } from './vision/vision.component';
@@ -18,7 +19,7 @@ import { Routes } from './routes';
     AppComponent,
     HomeComponent,
     VisionComponent,VisionStep1Component,
-    VisionDialog1Component
+    VisionDialog1Component,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,7 @@ import { Routes } from './routes';
     Routes,
     FormsModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,10 +15,19 @@
         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="#" *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Login</a></li>
+        <li *ngIf="auth.isAuthenticated()">Hello {{ profile?.nickname }}</li>
+        <button
+        class="btn btn-primary btn-margin"
+        *ngIf="auth.isAuthenticated()"
+        (click)="auth.logout()">
+          Log Out
+      </button>
       </ul>
     </div>
   </div>
 </nav>
 
+<main class="container">
 <router-outlet></router-outlet>
+</main>

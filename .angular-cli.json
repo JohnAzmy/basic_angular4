@@ -26,7 +26,8 @@
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
-      }
+      },
+      "angular2-jwt": "../node_modules/angular2-jwt/angular2-jwt.js"
     }
   ],
   "e2e": {

@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router';
 import {HttpModule} from '@angular/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AlertModule } from 'ngx-bootstrap';
+import { ApolloModule } from 'apollo-angular';
 
 
 import { AuthService } from './auth/auth.service';
@@ -12,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { VisionComponent } from './vision/vision.component';
 import { VisionStep1Component } from './vision/vision.step1.component';
 import { VisionDialog1Component } from './vision/vision.dialog1.component';
+import { provideClient } from './graphql/client';
 import { Routes } from './routes';
 
 @NgModule({
@@ -25,7 +27,8 @@ import { Routes } from './routes';
     BrowserModule,
     AlertModule.forRoot(),
     Routes,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule,
+    ApolloModule.forRoot(provideClient)
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
